@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BioEn.master.cs" Inherits="BieEnWeb.Master.BioEn" %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>BioEnergana</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="~/CSS/stilovi.css" />
+
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="~/Images/BeogradLogo.png" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/CSS/simple-sidebar.css" rel="stylesheet" />
+
+    <style type="text/css">
+        #OsnovniMenu a {
+            color: white !important;
+            font-weight: 600 !important;
+            text-decoration: none;
+            display: block;
+            white-space: normal !important;
+        }
+
+        .list-group-flush:last-child .list-group-item:last-child {
+            margin-bottom: unset !important;
+            border-bottom: unset !important;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        function openHelpPage(link) {
+            open(link, "Uputstvo", "status=1, scrollbars=1, resizable=1, width=1000, height=700, top=100, left=100");
+        }
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <header id="top">
+            <div class="row21">
+
+              <div id="logo"><a href="http://www.beograd.rs/" target="_blank"><img src="../../Images/BioEnerganaLogo.jpg" /></a></div>
+
+              <div id="naslov">
+                <%--<h3></h3>--%>
+                  <asp:Label ID="Label1" runat="server" Text="Firma - naziv ilogo"
+                                        Font-Bold="True" ForeColor="black"></asp:Label>
+                <%--<h4>Резервација паркинг места</h4>--%>
+                  <br />
+                  <asp:Label ID="Label2" runat="server" Font-Bold="True" ForeColor="black">Vrsta posla koji obavljamo</asp:Label>
+              </div>
+          
+              <div id="tabela1" class="ml-auto">
+                <div class="row">
+                  <%--<div><img src="Images/avatar.png" id="userImage"></div>--%>
+                  <div class="text-center">
+                    <%--<a href="#" id="user"><p>Алекса Стефановић</p></a>--%>
+                      <asp:LinkButton ID="lbtnKorisnik" runat="server" Visible="true" Font-Bold="True" ForeColor="black" OnClick="lbtnKorisnik_Click"></asp:LinkButton>
+                    <%--<a class="btn btn-danger" href="#"><i class="fas fa-power-off"></i>Одјава</a>--%>
+                    <div style="padding-top: 10px;">
+                      <asp:LinkButton ID="lbtnOdjava" CssClass="btn btn-danger" Width="150px" runat="server" Visible="true" Font-Bold="True" ForeColor="white" OnClick="lbtnOdjava_Click"><i class="fas fa-power-off"></i>Одјавите се</asp:LinkButton>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <asp:LinkButton ID="lnkPomoc" Visible="false" runat="server" OnClick="lnkPomoc_Click" ForeColor="#C3010D">Помоћ</asp:LinkButton>
+                <asp:Label ID="lblStatus" runat="server" ForeColor="#002079"></asp:Label>
+                <asp:HiddenField ID="lblUsrName" runat="server" />
+            </div>
+          </header>
+
+
+        
+
+
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="bg-light border-right" id="sidebar-wrapper">
+              <div class="sidebar-heading" >
+                <!-- <div style="display: inline-block; padding-left: 0.75rem;"> -->
+                  <div class="middle" >
+                        <a class="btnSocial" href="https://www.facebook.com/GradBeograd/" target="_blank">
+                          <i class="fab fa-facebook-f" ></i>
+                        </a>
+                        <a class="btnSocial" href="https://twitter.com/beograd_rs?lang=en" target="_blank" >
+                          <i class="fab fa-twitter" ></i>
+                        </a>
+                        <a class="btnSocial" href="https://www.instagram.com/grad_beograd/?hl=en" target="_blank" >
+                          <i class="fab fa-instagram" ></i>
+                        </a>
+                        <a class="btnSocial" href="https://chats.viber.com/gradbeograd" target="_blank" >
+                          <i class="fab fa-viber" ></i>
+                        </a>
+                  </div>
+                <!-- </div> -->
+              </div>
+              <div class="list-group list-group-flush" >
+                <asp:Menu ID="OsnovniMenu" runat="server" DataSourceID="menuXMLDS"
+                    Font-Bold="True" ForeColor="#002079" ItemWrap="True">
+                    <StaticMenuItemStyle ItemSpacing="4px" CssClass="list-group-item list-group-item-action bg-light" />
+                    <DataBindings>
+                        <asp:MenuItemBinding DataMember="siteMap" NavigateUrlField="Url" TextField="Funkcija"
+                            ValueField="Funkcija" />
+                    </DataBindings>
+                    <StaticHoverStyle BackColor="White" />
+                </asp:Menu>
+              </div>
+            </div>
+
+
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+
+              <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" >
+                <button class="btn " id="menu-toggle">
+                  <!-- Toggle Menu -->
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="nazivStranice1">
+                  <%--<h5>Администрација - Промена лозинке корисника</h5>--%>
+                    <asp:Label ID="lblNaslov" runat="server" Font-Bold="True" ForeColor="black"></asp:Label>
+                </div>
+
+                <%--<div id="nazivStranice2">
+                  <h5>Резервација паркинг места</h5>
+                </div>--%>
+              </nav>
+
+              <div class="container-fluid" >
+              <!-- Ovde se unose Web Forme -->
+                  <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                
+              <!-- Kraj unosa Web Formi -->
+              </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+        </div>
+
+        <!-- Footer -->
+          <footer class="page-footer font-small bg-light fixed-bottom ">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center">© <a href="https://www.infostan.rs/" target="_blank">ЈКП Инфостан технологије</a>, Данијелова 33, Београд
+            </div>
+            <!-- Copyright -->
+          </footer>
+          <!-- Footer -->
+
+        <asp:XmlDataSource ID="menuXMLDS" runat="server" EnableCaching="False" XPath="/*/*"></asp:XmlDataSource>
+
+    </form>
+
+    <!-- Bootstrap core JavaScript -->
+    
+    <script lang="javascript" type="text/javascript" src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Menu Toggle Script -->
+    <script lang="javascript" type="text/javascript">
+        $(document).ready(function() {
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        })
+     </script>
+    
+     
+    
+</body>
+</html>

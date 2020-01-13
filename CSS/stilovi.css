@@ -1,0 +1,652 @@
+﻿
+/* Sevetlo: */
+.dugme70 {
+    background: #ae97db;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 70px;
+    height: 24px;
+}
+.dugme70:hover
+{
+    background: #66023c;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 70px;
+    height: 24px;
+}
+    .dugme70[disabled] {
+        background: #aec2e5;
+        border-radius: 6px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #005094;
+        font-size: 11px;
+        border: solid #b3e6f9 1px;
+        width: 70px;
+        height: 24px;
+    }
+
+.dugme100 {
+    background: #7b5eb8; /*   #ad5f8d;  #66023c; #ae97db;*/
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 100px;
+    height: 24px;
+}
+    .dugme100:hover {
+        background: #6f2c82; /* #7b5eb8;*/
+        border-radius: 6px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 11px;
+        border: solid #66023c 1px;
+        width: 100px;
+        height: 24px;
+    }
+    .dugme100[disabled] {
+        background: #6f2c82; /*#7b5eb8; #66023c; #aec2e5;*/
+        border-radius: 6px;
+        font-family: Arial;
+        font-weight: bold;
+        color: black; /*#005094;*/
+        font-size: 11px;
+        border: solid #b3e6f9 1px;
+        width: 100px;
+        height: 24px;
+    }
+
+.dugme150
+{
+    background: #ae97db;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 150px;
+    height: 24px;
+}
+.dugme150:hover
+{
+    background: #66023c;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 150px;
+    height: 24px;
+}
+.dugme150[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 150px;
+    height: 24px;
+}
+
+.dugme200
+{
+    background-color: #ae97db;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 200px;
+    height: 24px;
+}
+.dugme200:hover
+{
+    background-color: #66023c;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid  #66023c 1px;
+    width: 200px;
+    height: 24px;
+}
+.dugme200[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 200px;
+    height: 24px;
+}
+
+.dugme250
+{
+    background: #ae97db;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 250px;
+    height: 24px;
+}
+.dugme250:hover
+{
+    background: #66023c;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 250px;
+    height: 24px;
+}
+.dugme250[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 250px;
+    height: 24px;
+}
+
+.dugme300
+{
+    background: #ae97db;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 300px;
+    height: 24px;
+}
+.dugme300:hover
+{
+    background: #66023c;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 300px;
+    height: 24px;
+}
+.dugme300[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 300px;
+    height: 24px;
+}
+
+.dugme350
+{
+    background: #ae97db;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 350px;
+    height: 24px;
+}
+.dugme350:hover
+{
+    background: #66023c;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 350px;
+    height: 24px;
+}
+.dugme350[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 350px;
+    height: 24px;
+}
+
+.dugme400
+{
+    background: #ae97db;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 400px;
+    height: 24px;
+}
+.dugme400:hover
+{
+    background: #66023c;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #66023c 1px;
+    width: 400px;
+    height: 24px;
+}
+.dugme400[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 400px;
+    height: 24px;
+}
+
+
+/* Tamno: */
+.dugmeTamno70
+{
+    background: #005094;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 70px;
+    height: 24px;
+}
+.dugmeTamno70:hover
+{
+    background: #b3e6f9 ;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #005094 1px;
+    width: 70px;
+    height: 24px;
+}
+.dugmeTamno70[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 70px;
+    height: 24px;
+}
+
+.dugmeTamno100
+{
+    background: #005094;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 100px;
+    height: 24px;
+}
+.dugmeTamno100:hover
+{
+    background: #b3e6f9 ;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #005094 1px;
+    width: 100px;
+    height: 24px;
+}
+.dugmeTamno100[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 100px;
+    height: 24px;
+}
+
+.dugmeTamno150
+{
+    background: #005094;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 150px;
+    height: 24px;
+}
+.dugmeTamno150:hover
+{
+    background: #b3e6f9 ;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #005094 1px;
+    width: 150px;
+    height: 24px;
+}
+.dugmeTamno150[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 150px;
+    height: 24px;
+}
+
+.dugmeTamno200
+{
+    background: #005094;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 200px;
+    height: 24px;
+}
+.dugmeTamno200:hover
+{
+    background: #b3e6f9 ;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #005094 1px;
+    width: 200px;
+    height: 24px;
+}
+.dugmeTamno200[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 200px;
+    height: 24px;
+}
+
+.dugmeTamno250
+{
+    background: #005094;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 250px;
+    height: 24px;
+}
+.dugmeTamno250:hover
+{
+    background: #b3e6f9 ;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #005094 1px;
+    width: 250px;
+    height: 24px;
+}
+.dugmeTamno250[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 250px;
+    height: 24px;
+}
+
+.dugmeTamno300
+{
+    background: #005094;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 300px;
+    height: 24px;
+}
+.dugmeTamno300:hover
+{
+    background: #b3e6f9 ;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+    border: solid #005094 1px;
+    width: 300px;
+    height: 24px;
+}
+.dugmeTamno300[disabled]
+{
+    background: #aec2e5;
+    border-radius: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #005094;
+    font-size: 11px;
+    border: solid #b3e6f9  1px;
+    width: 300px;
+    height: 24px;
+}
+
+
+/**/
+
+tr.trMaterKontrole
+{
+    height: 15px;
+    overflow: hidden;
+    vertical-align: top;
+    
+}
+
+
+body
+{
+    font-family: Arial;
+   
+}
+
+
+
+/*body
+{
+    font-family: Verdana;
+    font-size: 10pt;
+    ackground-color: #e7f5ff;
+}*/
+
+/*.buttonBasic80
+{
+    border: 1px outset #507CAD;
+    filter: progid:DXImageTransform.Microsoft.Gradient( GradientType=0, StartColorStr='#CBD8E7', EndColorStr='white');
+    color: #002079;
+    font-family: verdana;
+    width: 80px;
+}*/
+
+/*.buttonBasic100
+{
+    border: 1px outset #507CAD;
+    filter: progid:DXImageTransform.Microsoft.Gradient( GradientType=0, StartColorStr='#CBD8E7', EndColorStr='white');
+    color: #002079;
+    font-family: Verdana;
+}*/
+
+/*.buttonBasic130
+{
+    border: 1px outset #507CAD;
+    filter: progid:DXImageTransform.Microsoft.Gradient( GradientType=0, StartColorStr='#CBD8E7', EndColorStr='white');
+    color: #002079;
+    font-family: verdana;
+    width: 130px;
+}*/
+
+/*.buttonBasic220
+{
+    border: 1px outset #507CAD;
+    filter: progid:DXImageTransform.Microsoft.Gradient( GradientType=0, StartColorStr='#CBD8E7', EndColorStr='white');
+    color: #002079;
+    font-family: verdana;
+    width: 220px;
+}*/
+
+/*.buttonBasic40
+{
+    border: 1px outset #507CAD;
+    filter: progid:DXImageTransform.Microsoft.Gradient( GradientType=0, StartColorStr='#CBD8E7', EndColorStr='white');
+    color: #002079;
+    font-family: verdana;
+    width: 40px;
+}*/
+
+/*.skriveno
+{
+    border-left-color: White;
+    border-color: White;
+    visibility: visible;
+    color: White;
+    background-color: Transparent;
+    border: #000000;
+}*/
+
+/*.kolona
+{
+    color: Black;
+    font-family: verdana;
+    font-style: normal;
+}*/
+
+/*.blokMenu
+{
+    display: block;
+}*/
+
+/*.grid1 th
+{
+    background-color: #85CEFF;
+    background-color: #fff;
+}*/
+
+/*.Grid td
+{
+    background-color: white;
+    color: black;
+    font-size: 10pt;
+    line-height: 200%;
+    border: 1px outset #002079;
+    
+}
+.Grid th
+{
+    background-color: #85CEFF;
+    color: #002079;
+    font-size: 10pt;
+    line-height: 200%;
+    border: 2px;
+    border: 1px outset #002079;
+}
+.ChildGrid td
+{
+    background-color: #eee !important;
+    color: black;
+    font-size: 10pt;
+    line-height: 200%;
+    border: 1px outset #002079;
+}
+.ChildGrid th
+{
+    background-color: #6AA5CC !important;
+    color: #002079;
+    font-size: 10pt;
+    line-height: 200%;
+    border: 2px;
+    border: 1px outset #002079;
+}*/
+

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfBioEn" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/BioEn/BioEnWcf/WcfBioEn/WcfBioEn.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/BioEn/BioEnWcf/WcfBioEn/WcfBioEn.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/BioEn/BioEnWcf/WcfBioEn/WcfBioEn.svc?xsd=xsd2" namespace="http://tempuri.org/dsIzlaz.xsd" />
+      <xsd:import schemaLocation="http://localhost/BioEn/BioEnWcf/WcfBioEn/WcfBioEn.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost/BioEn/BioEnWcf/WcfBioEn/WcfBioEn.svc?xsd=xsd4" namespace="http://tempuri.org/dsUlaz.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfBioEn_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_FunkcijaVrati_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunkcijaVrati" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_FunkcijaVrati_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunkcijaVratiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_FunkcijaVratiZaKorLi_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunkcijaVratiZaKorLi" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_FunkcijaVratiZaKorLi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunkcijaVratiZaKorLiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikPravoNaFunkciju_InputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikPravoNaFunkciju" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikPravoNaFunkciju_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikPravoNaFunkcijuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikPrijava_InputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikPrijava" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikPrijava_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikPrijavaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_RestartLozinke_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestartLozinke" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_RestartLozinke_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestartLozinkeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikPromenaPodataka_InputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikPromenaPodataka" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikPromenaPodataka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikPromenaPodatakaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikUnos_InputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikUnos" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikUnos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikUnosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikVrati_InputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikVrati" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_KorisnikVrati_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KorisnikVratiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_PromenaPravaKorisnika_InputMessage">
+    <wsdl:part name="parameters" element="tns:PromenaPravaKorisnika" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_PromenaPravaKorisnika_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PromenaPravaKorisnikaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_TipFunkcijeVrati_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipFunkcijeVrati" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_TipFunkcijeVrati_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipFunkcijeVratiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_UlogaVrati_InputMessage">
+    <wsdl:part name="parameters" element="tns:UlogaVrati" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_UlogaVrati_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UlogaVratiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_JedinicaMereVrati_InputMessage">
+    <wsdl:part name="parameters" element="tns:JedinicaMereVrati" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_JedinicaMereVrati_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JedinicaMereVratiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_JediniceMerePromenaPodataka_InputMessage">
+    <wsdl:part name="parameters" element="tns:JediniceMerePromenaPodataka" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_JediniceMerePromenaPodataka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JediniceMerePromenaPodatakaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_JMBrisi_InputMessage">
+    <wsdl:part name="parameters" element="tns:JMBrisi" />
+  </wsdl:message>
+  <wsdl:message name="IWcfBioEn_JMBrisi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JMBrisiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfBioEn">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/DoWork" message="tns:IWcfBioEn_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/DoWorkResponse" message="tns:IWcfBioEn_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunkcijaVrati">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/FunkcijaVrati" message="tns:IWcfBioEn_FunkcijaVrati_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/FunkcijaVratiResponse" message="tns:IWcfBioEn_FunkcijaVrati_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunkcijaVratiZaKorLi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/FunkcijaVratiZaKorLi" message="tns:IWcfBioEn_FunkcijaVratiZaKorLi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/FunkcijaVratiZaKorLiResponse" message="tns:IWcfBioEn_FunkcijaVratiZaKorLi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikPravoNaFunkciju">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikPravoNaFunkciju" message="tns:IWcfBioEn_KorisnikPravoNaFunkciju_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikPravoNaFunkcijuResponse" message="tns:IWcfBioEn_KorisnikPravoNaFunkciju_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikPrijava">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikPrijava" message="tns:IWcfBioEn_KorisnikPrijava_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikPrijavaResponse" message="tns:IWcfBioEn_KorisnikPrijava_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestartLozinke">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/RestartLozinke" message="tns:IWcfBioEn_RestartLozinke_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/RestartLozinkeResponse" message="tns:IWcfBioEn_RestartLozinke_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikPromenaPodataka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikPromenaPodataka" message="tns:IWcfBioEn_KorisnikPromenaPodataka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikPromenaPodatakaResponse" message="tns:IWcfBioEn_KorisnikPromenaPodataka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikUnos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikUnos" message="tns:IWcfBioEn_KorisnikUnos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikUnosResponse" message="tns:IWcfBioEn_KorisnikUnos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikVrati">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikVrati" message="tns:IWcfBioEn_KorisnikVrati_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/KorisnikVratiResponse" message="tns:IWcfBioEn_KorisnikVrati_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PromenaPravaKorisnika">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/PromenaPravaKorisnika" message="tns:IWcfBioEn_PromenaPravaKorisnika_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/PromenaPravaKorisnikaResponse" message="tns:IWcfBioEn_PromenaPravaKorisnika_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipFunkcijeVrati">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/TipFunkcijeVrati" message="tns:IWcfBioEn_TipFunkcijeVrati_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/TipFunkcijeVratiResponse" message="tns:IWcfBioEn_TipFunkcijeVrati_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UlogaVrati">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/UlogaVrati" message="tns:IWcfBioEn_UlogaVrati_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/UlogaVratiResponse" message="tns:IWcfBioEn_UlogaVrati_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JedinicaMereVrati">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/JedinicaMereVrati" message="tns:IWcfBioEn_JedinicaMereVrati_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/JedinicaMereVratiResponse" message="tns:IWcfBioEn_JedinicaMereVrati_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JediniceMerePromenaPodataka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/JediniceMerePromenaPodataka" message="tns:IWcfBioEn_JediniceMerePromenaPodataka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/JediniceMerePromenaPodatakaResponse" message="tns:IWcfBioEn_JediniceMerePromenaPodataka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JMBrisi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfBioEn/JMBrisi" message="tns:IWcfBioEn_JMBrisi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfBioEn/JMBrisiResponse" message="tns:IWcfBioEn_JMBrisi_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfBioEn" type="tns:IWcfBioEn">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunkcijaVrati">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/FunkcijaVrati" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunkcijaVratiZaKorLi">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/FunkcijaVratiZaKorLi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikPravoNaFunkciju">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/KorisnikPravoNaFunkciju" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikPrijava">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/KorisnikPrijava" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestartLozinke">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/RestartLozinke" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikPromenaPodataka">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/KorisnikPromenaPodataka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikUnos">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/KorisnikUnos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KorisnikVrati">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/KorisnikVrati" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromenaPravaKorisnika">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/PromenaPravaKorisnika" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipFunkcijeVrati">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/TipFunkcijeVrati" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UlogaVrati">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/UlogaVrati" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JedinicaMereVrati">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/JedinicaMereVrati" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JediniceMerePromenaPodataka">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/JediniceMerePromenaPodataka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JMBrisi">
+      <soap:operation soapAction="http://tempuri.org/IWcfBioEn/JMBrisi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfBioEn">
+    <wsdl:port name="BasicHttpBinding_IWcfBioEn" binding="tns:BasicHttpBinding_IWcfBioEn">
+      <soap:address location="http://localhost/BioEn/BioEnWcf/WcfBioEn/WcfBioEn.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
