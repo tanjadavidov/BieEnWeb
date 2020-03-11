@@ -11,7 +11,10 @@ namespace BieEnWeb.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Ucitaj();
+            if (!IsPostBack && !Page.IsCallback)
+            {
+                Ucitaj();
+            }
         }
 
         protected void btnSacuvaj_OnClick(object sender, EventArgs e)
@@ -103,12 +106,8 @@ namespace BieEnWeb.UserControls
                     lblUkupanBroj.Text = "Ukupan broj: " + odgovor.JedinicaMereVratiResult.dtJedinicaMereVrati.Rows.Count;
                     Label2.Text = "Pregled podataka o Jedinicama mere";
 
-                    //tanjaovde
-                  /*  foreach (GridViewRow red in gvJedMere.Rows)
-                    {
-                        TextBox NazJedMere = (TextBox)red.FindControl("tbNazJedMere");
-                        NazJedMere.Text = NazJedMere.Text.Replace('.', ',');
-                    }*/
+                    
+                 
                 }
             }
             catch (Exception ex)
@@ -276,8 +275,6 @@ namespace BieEnWeb.UserControls
 
         protected void btnSacuvajIzmene_Click(object sender, EventArgs e)
         {
-
-           
 
             GridViewRow redUGridu = (GridViewRow)(((Button)sender).Parent).Parent;
             int rowIndex = redUGridu.RowIndex;

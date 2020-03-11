@@ -54,14 +54,18 @@
 <br />
 
 
-<div class="container">
-  
 
-    <asp:Panel ID="pnlUnos" runat="server">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:Panel ID="pnlUnos" runat="server" Width="100%">
+                        <div class="container">
+
+
+
        
 
         <div class="row">
-            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                 <asp:Label ID="Label5" CssClass="float-md-left" runat="server" Text="Skraćeni naziv jedinice mere" Font-Bold="true" Font-Size="14px" Font-Names="Sans-serif"></asp:Label>
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -73,13 +77,8 @@
         </div>
 
      <div class="row">
-             <%-- <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12">
-                <asp:Label ID="idJedMere" CssClass="float-md-left" runat="server" Text="Id jedinice mere" Font-Bold="true" Font-Size="14px" Font-Names="Sans-serif" ></asp:Label>
-            </div>
+     
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <asp:TextBox ID="tbIdJedMere" CssClass="glowing-border" runat="server" MaxLength="50" Width="225px" Height="24px" Enabled="false"></asp:TextBox>
-            </div>--%>
-            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12">
                 <asp:Label ID="Label4" CssClass="float-md-left" runat="server" Text="Naziv jedinice mere" Font-Bold="true" Font-Size="14px" Font-Names="Sans-serif"></asp:Label>
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -90,7 +89,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
 
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -98,43 +97,53 @@
                     Style="text-align: center; font-size: 14px;" Text="Sačuvaj" UseSubmitBehavior="false" />
             </div>
         </div>
-    </asp:Panel>
+       </div>
 
- <div class="row">
+    </asp:Panel>
+    </ContentTemplate>
+     </asp:UpdatePanel>  
+
+  <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <ContentTemplate>
+                    <asp:Panel ID="Pa" runat="server" Width="100%">
+                        <div class="container">
+
+    <div class="row">
         <div class="col-12" style="overflow-x:auto;">
             <div style="margin-left: auto; margin-right: auto; text-align: center;">
                 <br /><br />
                 <div class="row"> 
-                <%--<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">--%>
-                     <div class="col-6" style="overflow-x:auto;">
+            
+              <div class="col-8" style="overflow-x:auto;">
+            <%-- <div class="col-12">--%>
                 <asp:Label ID="Label2" runat="server" Text="" Font-Bold="true" Font-Size="14px" Font-Names="Sans-serif"></asp:Label>
                 </div>
                  </div>
                <div class="row">
-<%--              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12" style="overflow-x:auto;">--%>
-                   <%--<div class="col-6" style="overflow-x:auto;">--%>
-                       <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12" style="text-align:left">
+
+               <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12" style="text-align:left">
                 <asp:Label ID="lblUkupanBroj" runat="server" Text="" CssClass="float-md-right" Font-Bold="true" Font-Size="12px" Font-Names="Sans-serif"></asp:Label>
              </div>
               </div>
             </div>
-          <%--  CssClass="auto-style72"--%>
+     
 
              
 
-                <asp:GridView ID="gvJedMere" runat="server" AutoGenerateColumns="False"  DataKeyNames="IdJedMere" EmptyDataText="Nema podataka za prikaz" 
+     <asp:GridView ID="gvJedMere" runat="server" AutoGenerateColumns="False"  DataKeyNames="IdJedMere" EmptyDataText="Nema podataka za prikaz" 
          EnableViewState="True"  ShowFooter="false" Width="60%" PageSize="5"  OnPageIndexChanging="gvJedMere_PageIndexChanging" AllowSorting="True"  AllowPaging="true">
     <Columns>
 
-        <asp:TemplateField HeaderStyle-BorderColor="White" headerstyle-width="5%" HeaderStyle-BorderWidth="0px" HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" 
+        <asp:TemplateField HeaderStyle-BorderColor="White" headerstyle-width="6%" HeaderStyle-BorderWidth="0px" HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" 
             HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="8" HeaderStyle-Wrap="true" HeaderText="" ItemStyle-BorderColor="White" ItemStyle-BorderWidth="0px" 
             ItemStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" ShowHeader="false" >   <%--HeaderStyle-BackColor="White"--%>
             <ItemTemplate>
-                <asp:Button ID="btnObrisi" runat="server" CssClass="dugme100" OnClick="btnObrisi_Click" OnClientClick="if(!confirm('Сигурни сте?')) return false;" Text="Обриши" UseSubmitBehavior="false" />
+                <asp:Button ID="btnObrisi" runat="server" CssClass="dugme100" OnClick="btnObrisi_Click" OnClientClick="if(!confirm('Sigurni ste?')) return false;" 
+                    Text="Obriši" UseSubmitBehavior="false" width="100%"/>
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:TemplateField FooterStyle-BackColor="White" headerstyle-width="5%" FooterStyle-BorderStyle="None" HeaderStyle-BorderColor="Black" HeaderStyle-BorderWidth="1px"
+        <asp:TemplateField FooterStyle-BackColor="White" headerstyle-width="7%" FooterStyle-BorderStyle="None" HeaderStyle-BorderColor="Black" HeaderStyle-BorderWidth="1px"
             HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="9" HeaderStyle-Wrap="true" 
             HeaderText="Id jm" ItemStyle-BorderColor="Black" ItemStyle-BorderWidth="1px" ItemStyle-CssClass="poravnavanjeTekstaDesno vertikalnoCentriranTekst"
             ItemStyle-Font-Bold="false" ItemStyle-Font-Size="10" ShowHeader="true" Visible="true" ItemStyle-HorizontalAlign="Center">
@@ -143,18 +152,12 @@
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:TemplateField FooterStyle-BackColor="White" headerstyle-width="8%" FooterStyle-BorderStyle="None" HeaderStyle-BorderColor="Black" HeaderStyle-BorderWidth="1px" 
+        <asp:TemplateField FooterStyle-BackColor="White" headerstyle-width="10%" FooterStyle-BorderStyle="None" HeaderStyle-BorderColor="Black" HeaderStyle-BorderWidth="1px" 
             HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="9" HeaderStyle-Wrap="true" 
             HeaderText="jm skraćeno" ItemStyle-BorderColor="Black" ItemStyle-BorderWidth="1px"  
             ItemStyle-Font-Bold="false" ItemStyle-Font-Size="10" ShowHeader="true" Visible="true" >  <%--CssClass="Indent poravnavanjeTekstaCentar vertikalnoCentriranTekst"--%>
             <ItemTemplate>
-                <asp:TextBox ID="tbSkracNazJedMere"  runat="server"  style="text-align: center" width="99%" Text='<%# Eval("SkracNazJedMere") %>'  ReadOnly="true"></asp:TextBox>  <%----%>
-                <%--<cc1:MaskedEditExtender ID="tbCenaPozicije_MaskedEditExtender" runat="server" CultureAMPMPlaceholder=""
-                    CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder=""
-                    CultureDecimalPlaceholder="" CultureThousandsPlaceholder="" CultureTimePlaceholder=""
-                    Enabled="True" TargetControlID="tbCenaPozicije" MaskType="Number" InputDirection="LeftToRight"
-                    CultureName="sr-Latn-CS" Mask="999999,99" AutoComplete="false">
-                </cc1:MaskedEditExtender>--%>
+        <asp:TextBox ID="tbSkracNazJedMere"  runat="server"  style="text-align: center" width="99%" Text='<%# Eval("SkracNazJedMere") %>'  ReadOnly="true"></asp:TextBox>  <%----%>              
             </ItemTemplate>
         </asp:TemplateField>
 
@@ -166,29 +169,30 @@
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:TemplateField HeaderStyle-BorderColor="White" headerstyle-width="5%" HeaderStyle-BorderWidth="0px" HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst"
+        <asp:TemplateField HeaderStyle-BorderColor="White" headerstyle-width="6%" HeaderStyle-BorderWidth="0px" HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst"
             HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="8" HeaderStyle-Wrap="true" HeaderText="" ItemStyle-BorderColor="White" ItemStyle-BorderWidth="0px"
             ItemStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" ShowHeader="false" >  <%--HeaderStyle-BackColor="White"--%>
             <ItemTemplate>
-                <asp:Button ID="btnIzmeni" runat="server" CssClass="dugme100" OnClick="btnIzmeni_Click" OnClientClick="ClientSideClick(this)" Text="Izmeni" UseSubmitBehavior="false" />
+                <asp:Button ID="btnIzmeni" runat="server" CssClass="dugme100" OnClick="btnIzmeni_Click" OnClientClick="ClientSideClick(this)" 
+                    Text="Izmeni" UseSubmitBehavior="false" width="100%"/>
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:TemplateField HeaderStyle-BorderColor="White" headerstyle-width="5%" HeaderStyle-BorderWidth="0px" HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" 
+        <asp:TemplateField HeaderStyle-BorderColor="White" headerstyle-width="6%" HeaderStyle-BorderWidth="0px" HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" 
             HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="8" HeaderStyle-Wrap="true" HeaderText="" ItemStyle-BorderColor="White" ItemStyle-BorderWidth="0px" 
             ItemStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" ShowHeader="false" >   <%--HeaderStyle-BackColor="White"--%>
             <ItemTemplate>
                 <asp:Button ID="btnSacuvajIzmene" Enabled="false" runat="server" CssClass="dugme100" OnClick="btnSacuvajIzmene_Click" OnClientClick="ClientSideClick(this)" 
-                    Text="Sačuvaj izmene" UseSubmitBehavior="false"  />
+                    Text="Sačuvaj izmene" UseSubmitBehavior="false"  width="100%"/>
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:TemplateField HeaderStyle-BorderColor="White" headerstyle-width="5%" HeaderStyle-BorderWidth="0px" HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst"
+        <asp:TemplateField HeaderStyle-BorderColor="White" headerstyle-width="6%" HeaderStyle-BorderWidth="0px" HeaderStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst"
             HeaderStyle-Font-Bold="true" HeaderStyle-Font-Size="8" HeaderStyle-Wrap="true" HeaderText="" ItemStyle-BorderColor="White" ItemStyle-BorderWidth="0px"
             ItemStyle-CssClass="poravnavanjeTekstaCentar vertikalnoCentriranTekst" ShowHeader="false" > <%--HeaderStyle-BackColor="White"--%>
             <ItemTemplate>
                 <asp:Button ID="btnOtkaziIzmene" Enabled="false" runat="server" CssClass="dugme100" OnClick="btnOtkaziIzmene_Click" OnClientClick="ClientSideClick(this)"
-                    Text="Otkaži izmene" UseSubmitBehavior="false" />
+                    Text="Otkaži izmene" UseSubmitBehavior="false" width="100%"/>
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>
@@ -203,7 +207,13 @@
                
         </div>
     </div>
+                    
+                   
+   </div>
 
+    </asp:Panel>
+    </ContentTemplate>
+     </asp:UpdatePanel>  
 
     <div class="row">
         <div class="col-12" style="overflow-x:auto;">
@@ -228,4 +238,3 @@
              
         </div>
     </div>
-</div>
